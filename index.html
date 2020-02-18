@@ -6,47 +6,63 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,600i&display=swap" rel="stylesheet">
 	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- These semantic tags were added to help you get started but you are very welcome to delete any of them and do your own thing -->
 	<header>
-		<!-- header, h1, logo etc content -->
-		<h1>There Can Be Only One Header One</h1>
-		<h2>Header Two</h2>
-		<h3>Header Three</h3>
-		<h4>Header Four</h4>
-		<p>A paragraph of lorem ipsum text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, eligendi.</p>
-	</header>
+		<a href="index.html"><img id="nametag" alt="Mindfully Beautiful logo" src="images/nametag.png"></a>
 
-	<nav>
-		<!-- Global naviagtion stuff here, but move this or delete this to your liking. Same goes for the rest -->
-		<ul>
-			<li><a href="subpage-one.html">example link to subpage one</a></li>
-			<li><a href="#">link</a></li>
-			<li><a href="#">link</a></li>
-		</ul>
+	<nav align="right">
+		<a href="about.html">about</a>
+<div class="dropdown">
+  <button class="dropbtn">services</button>
+  <div class="dropdown-content">
+    <a href="#">service menu</a>
+    <a href="#">eyelashes</a>
+    <a href="#">prep & aftercare</a>
+		<a href="#">your natural lashes</a>
+    <a href="#">gallery</a>
+  </div>
+</div>
+		<a href="#">book an appt</a>
 	</nav>
+</header>
 	<main>
-		<blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus soluta vero fugiat saepe, tempore laboriosam nemo pariatur maxime sunt rerum."</blockquote>
-	<!-- Main content here -->
-		<div class="grid">
-			<div>Column 1</div>
-			<div>Column 2</div>
+		<div class="frontpage-grid">
+			<div class="leafeye"><a href="lashes.html"><img id="leafeye" alt="eye looking through a large leaf" img src="images/leafeye.png"></a></div>
+			<div class="mountainhair"><a href="hair.html"><img id="mountainhair" alt="woman looking over mountains, with shiny hair" img src="images/mountainhair.png"></a></div>
 		</div>
 	</main>
 	<footer>
-		<!-- footer content here -->
-		&copy; Team Awesome
+		&copy; Mindfully Beautiful
 	</footer>
 	<!-- link for jquery -->
 	<script
-  	src="https://code.jquery.com/jquery-3.4.1.min.js"
-  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  	crossorigin="anonymous"></script>
-  	<!-- link for your script file -->
-  	<script src="js/script.js"></script>
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+<script>
+		$(function(){
+			       $("#leafeye").on({
+			        mouseenter: function(){
+			         $(this).attr('src','images/leafeye-bw.png');
+			       },
+			       mouseleave: function(){
+			         $(this).attr('src','images/leafeye.png');
+			       }
+			       });
+						 $("#mountainhair").on({
+			        mouseenter: function(){
+			         $(this).attr('src','images/mountainhair-bw.png');
+			       },
+			       mouseleave: function(){
+			         $(this).attr('src','images/mountainhair.png');
+			       }
+			       });
+		});
+	</script>
 </body>
 </html>

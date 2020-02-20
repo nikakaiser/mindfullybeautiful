@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mindfully Beautiful</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,600i&display=swap" rel="stylesheet">
+	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
+<style>
+  /*common styles !!!YOU DON'T NEED THEM */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #1D6745;
+  line-height: 1.4;
+}
+
+.container {
+  width: 1100px;
+  margin: 50px auto 0;
+}
+.container h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.container h1 span {
+  position: relative;
+  font-family: 'Merienda', cursive;
+  color: #1D6745;
+}
+.container h1 span:after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  content: "~";
+  width: 100%;
+  text-align: center;
+}
+.container .subheader {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.link {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 800px;
+  margin: 30px auto 0;
+}
+.link a {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  flex-shrink: 0;
+  margin-right: 40px;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+.link a:hover {
+  color: #CA9CE1;
+}
+.link a:last-child {
+  margin-right: 0;
+}
+.link a i {
+  color: #CA9CE1;
+  margin-right: 9px;
+  font-size: 30px;
+}
+
+.slider-containers {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.slider-container {
+  margin-bottom: 60px;
+}
+.slider-container h2 {
+  text-align: center;
+}
+
+.flexbox-slider {
+  margin-top: 50px;
+}
+
+/*slide styles !!!YOU NEED THEM */
+.flexbox-slider {
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  visibility: hidden;
+}
+.flexbox-slider .flexbox-slide {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  width: 20%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  visibility: visible;
+}
+.flexbox-slider .flexbox-slide:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 103, 69, 40, 0.6);
+  z-index: 2;
+  opacity: 0;
+}
+.flexbox-slider .flexbox-slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.flexbox-slider .flexbox-slide .text-block {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+}
+.flexbox-slider .flexbox-slide .text-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.flexbox-slider:hover .flexbox-slide:hover {
+  flex-shrink: 0;
+  width: 80%;
+}
+
+/* effect 1 styles */
+.flexbox-slider.flexbox-slider-1 .flexbox-slide .text-block {
+  bottom: 60px;
+}
+.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .text-block {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img id="nametag" alt="Mindfully Beautiful logo" src="images/nametag.png"></a>
+
+	<nav align="right">
+
+		<a href="about.html">about</a>
+<div class="dropdown">
+  <button class="dropbtn">services</button>
+  <div class="dropdown-content">
+    <a href="#">service menu</a>
+    <a href="#">eyelashes</a>
+    <a href="#">prep & aftercare</a>
+		<a href="#">your natural lashes</a>
+    <a href="lashgallery.html">gallery</a>
+  </div>
+</div>
+		<a href="#">book an appt</a>
+	</nav>
+</header>
+<div class="container">
+
+  <div class="slider-containers">
+
+    <!--effect #1 -->
+    <div class="slider-container">
+      <h2>hair cuts, colors, & styles</h2>
+      <div class="flexbox-slider flexbox-slider-1">
+        <div class="flexbox-slide">
+          <img src="images/naturalset.jpg" alt="Slide Image">
+          <div class="text-block">
+            <h3>Hair 1</h3>
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+            </div>
+          </div>
+        </div>
+        <div class="flexbox-slide">
+          <img src="images/divaset.png" alt="Slide Image">
+          <div class="text-block">
+            <h3>Hair 2</h3>
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+            </div>
+          </div>
+        </div>
+        <div class="flexbox-slide">
+          <img src="images/cateyepartial.png" alt="Slide Image">
+          <div class="text-block">
+            <h3>Hair 3</h3>
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+            </div>
+          </div>
+        </div>
+        <div class="flexbox-slide">
+          <img src="images/siberianmink.jpg" alt="Slide Image">
+          <div class="text-block">
+            <h3>Hair 4</h3>
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+            </div>
+          </div>
+        </div>
+        <div class="flexbox-slide">
+          <img src="images/russianvolume.jpg" alt="Slide Image">
+          <div class="text-block">
+            <h3>Hair 5</h3>
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+</body>
+</html>

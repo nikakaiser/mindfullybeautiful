@@ -102,6 +102,33 @@ nav a:hover{
 	padding: 50px;
 }
 
+.menu-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	margin: auto;
+	padding: 50px;
+	grid-gap: 20px;
+}
+
+#menu-img {
+	grid-column: 1/4;
+}
+#policies-img {
+	grid-column: 4/5;
+}
+#hair-img {
+	grid-column: 1/3;
+}
+#lash-img {
+	grid-column: 1/3;
+}
+#brow-img {
+	grid-column: 3/5;
+}
+#occasion-img {
+	grid-column: 3/5;
+}
 
 .footer{
 	align: center;

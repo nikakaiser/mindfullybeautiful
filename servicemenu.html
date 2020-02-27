@@ -10,6 +10,13 @@
 	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		
+		.right, .alanna-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -31,14 +38,42 @@
 		<a href="#">book an appt</a>
 	</nav>
 </header>
+
+<section class="alanna-grid">
+	<div class="left">
+		<a href="#"><img src="images/menu.png" alt=""></a>
+		<a href="#" id="policies"><img src="images/policies.png" alt=""></a>
+
+	</div>
+	<div class="right">
+		<div>
+				<a id="lash-menu"><img id="hair-img" img src="images/hair.png" alt=""></a></div>
+      <div>
+      	<a id="brow-menu"><img id="lash-img" img src="images/lashes.png" alt=""></a></div>
+  
+      <div>
+      	<a id="brow-menu"><img id="brow-img" img src="images/brows.png" alt=""></a></div>
+      <div>
+      	<a id="occasion-menu"><img id="occasion-img" img src="images/occasion.png" alt=""></a></div>
+      <div>
+	</div>
+
+</section>
 	<main>
 		<div class="menu-grid">
-      <div><a id="hair-menu"><img id="menu-img" img src="images/menu.png" alt=""></a></div>
-			<div><a id="lash-menu"><img id="hair-img" img src="images/hair.png" alt=""></a></div>
-      <div><a id="brow-menu"><img id="lash-img" img src="images/lashes.png" alt=""></a></div>
-      <div><a id="policies"><img id="policies-img" img src="images/policies.png" alt=""></a></div>
-      <div><a id="brow-menu"><img id="brow-img" img src="images/brows.png" alt=""></a></div>
-      <div><a id="occasion-menu"><img id="occasion-img" img src="images/occasion.png" alt=""></a></div>
+      <div class="feature">
+      	<a id="hair-menu"><img id="menu-img" src="images/menu.png" alt=""></a></div>
+			<div>
+				<a id="lash-menu"><img id="hair-img" img src="images/hair.png" alt=""></a></div>
+      <div>
+      	<a id="brow-menu"><img id="lash-img" img src="images/lashes.png" alt=""></a></div>
+  
+      <div>
+      	<a id="brow-menu"><img id="brow-img" img src="images/brows.png" alt=""></a></div>
+      <div>
+      	<a id="occasion-menu"><img id="occasion-img" img src="images/occasion.png" alt=""></a></div>
+      <div>
+      	<a id="policies"><img id="policies-img" img src="images/policies.png" alt=""></a></div>
 		</div>
 
   <div class="menu-content">
